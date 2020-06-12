@@ -1,0 +1,24 @@
+body { 
+
+font-family:Helvetica;
+font-size: 14px; 
+line-height:21px;
+width:600px;
+font-weight :100;
+margin:auto;
+color: #3D3838;
+background-color: #eee;
+}
+
+h2{
+	padding: 10px;
+	text-transform: capitalize;
+	background-color:#fff;
+	border-bottom:solid 3px #ccc;
+}
+
+p{
+	font-size :14px;
+	line-height:21px;
+	text-align:justify;
+}
