@@ -1,0 +1,102 @@
+header { background-image:url(../img/fond.jpg);
+background-size:cover;
+background-repeat: no-repeat;
+background-position: center;
+text-align:center;
+color:#FFFFFD;
+}
+body{
+    font-size:1em;
+    font-family:"Playfair Display";
+    box-sizing: border-box;
+
+   
+}
+h1, h2, h3, nav {font-family:"Kaushan Script";}
+nav{
+    font-size:1.2em;
+    padding:2%;
+    vertical-align:top;
+background-color:rgba(217, 192, 234, 0.5);
+
+}
+ .fa{display:block;}
+.intro{
+    color:#8D95A2;
+}
+header a {
+    display: inline-block;
+	font-size: 1.4em;
+	padding: 25px;
+    color:#FFFFFD;
+    text-align:center;
+    
+}
+header p{ 
+    padding:1%;
+    background-color:rgba(227, 207, 235, 0.5);
+    margin-top:0;
+}
+header h1{
+    padding:9%;
+    font-size:2em;
+    text-shadow: #FFFCFF 0.1em 0.1em 0.2em;
+}
+.block{
+background-image:url(../img/background_section.jpg);
+background-size:cover;
+background-repeat:no-repeat;
+background-position: center;
+display:inline-block;
+color:#FFFCFF;
+margin:0 auto;
+}
+.cours img{
+    float:left;
+    padding:20px;
+    margin:auto;
+}
+.posture img {
+    float:right;
+    padding:20px;
+    margin:auto;
+}
+hr {clear:left;}
+.gauche{
+    display:inline-block;
+    width:30%;
+    text-align:center;
+    vertical-align:top;
+   
+}
+.droite {
+    display:inline-block;
+    width:30%;
+    text-align:center;
+    vertical-align:top;
+
+
+}
+
+    .milieu{
+        display:inline-block;
+        text-align:center;
+        width:30%;
+        padding-top:0;
+        vertical-align:top;
+ }
+ 
+ #licence {
+    display:block;
+    text-align: center;
+    padding: 25px;}
+
+footer{background-color:#937AD6;}
+/* HEADER */
+/* Ce qui concerne le header et la nav */
+
+/* MAIN */
+/* Ce qui concerne le corps du site */
+
+/* FOOTER */
+/* Ce qui concerne le footer */

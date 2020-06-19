@@ -8,3 +8,4 @@ const months = ['janvier','fevrier','mars','avril','mai','juin','juillet','août
 ,'septembre','octobre','novembre','decembre'];
 const years = aujourdhui.getFullYear();
 console.log (months [mois] , weekdays [day] ,years , jour);
+document.write(months [mois] , weekdays [day] ,years , jour);

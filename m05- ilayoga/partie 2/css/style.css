@@ -1,0 +1,167 @@
+header { background-image:url(../img/fond.jpg);
+background-size:cover;
+background-repeat: no-repeat;
+background-position: center;
+text-align:center;
+color:#FFFFFD;
+}
+body{
+    font-size:1em;
+    font-family:"Playfair Display";
+    box-sizing: border-box;
+
+   
+}
+h1, h2, h3, nav {font-family:"Kaushan Script";}
+nav{
+    font-size:1.2em;
+    padding:2%;
+    vertical-align:top;
+background-color:rgba(217, 192, 234, 0.5);
+
+}
+ .fa{display:block;}
+.intro{
+    color:#8D95A2;
+}
+header a {
+    display: inline-block;
+	font-size: 1.4em;
+	padding: 25px;
+    color:#FFFFFD;
+    text-align:center;
+    
+}
+header p{ 
+    padding:1%;
+    background-color:rgba(227, 207, 235, 0.5);
+    margin-top:0;
+}
+header h1{
+    padding:9%;
+    font-size:2em;
+    text-shadow: #FFFCFF 0.1em 0.1em 0.2em;
+}
+.block{
+background-image:url(../img/background_section.jpg);
+background-size:cover;
+background-repeat:no-repeat;
+background-position: center;
+display:inline-block;
+color:#FFFCFF;
+margin:0 auto;
+}
+.cours img{
+    float:left;
+    padding:20px;
+    margin:auto;
+}
+.posture img {
+    float:right;
+    padding:20px;
+    margin:auto;
+}
+hr {clear:left;}
+.gauche{
+    display:inline-block;
+    width:30%;
+    text-align:center;
+    vertical-align:top;
+   
+}
+.droite {
+    display:inline-block;
+    width:30%;
+    text-align:center;
+    vertical-align:top;
+
+
+}
+
+    .milieu{
+        display:inline-block;
+        text-align:center;
+        width:30%;
+        padding-top:0;
+        vertical-align:top;
+ }
+
+table{
+    border-collapse: collapse;
+    width:90%;
+    vertical-align:middle;
+    margin:auto;
+}
+
+table a {
+    color:#A29BC5;
+    text-decoration:none;
+}
+td, th {/* Mettre une bordure sur les td ET les th */
+    border: 1px solid black;
+    width:30%;
+    height:50px;
+}
+tbody tr {
+text-align:center;
+}
+tbody td:first-child{text-align:left;}
+tbody tr:nth-child(odd) {
+  background-color: #FFFFFF;
+}
+.cont h2{font-family:"Playfair Display";
+    text-align:center;
+}
+tbody tr:nth-child(even) {
+  background-color: #F2F2F2;
+}
+thead {
+  background-color:#C4A9DE;
+  text-align:left;
+  font-family:"Kaushan Script";
+  font-size:1.6em;
+  color:#FFFFFF;
+  text-shadow: 1px 1px 1px black;
+}
+.cont {background-color:#FFFFFF;}
+
+fieldset {
+line-height:1.4;
+font-size:1.2em;
+padding:3%;
+color:#3F455D;
+width:90%;
+text-align:center;
+
+}
+legend {
+    font-size:1.6em;
+
+}
+
+
+.submit{display:block;
+background-color:#937AD6;
+padding: 10px 20px; 
+width: 11%;
+margin-right:0;
+color:#FFFFFF;
+text-align:center;
+margin:auto;
+}
+
+ #licence {
+    display:block;
+    text-align: center;
+    padding: 25px;}
+select {width:90%;}
+
+footer{background-color:#937AD6;}
+/* HEADER */
+/* Ce qui concerne le header et la nav */
+
+/* MAIN */
+/* Ce qui concerne le corps du site */
+
+/* FOOTER */
+/* Ce qui concerne le footer */

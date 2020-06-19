@@ -1,0 +1,112 @@
+/* FONT FACE */
+/* Appelle les polices de la page */
+/*problème de récupération de liens de polices */
+header{
+ background-color: #25B3B4;
+	border-top: 5px solid #1B9CA2;
+	border-bottom: 5px solid #1B9CA2;
+	margin-top: 100px;
+	text-align: center;}
+	
+header a{
+	display: inline-block;
+	color: white;
+	padding: 15px;
+}
+a{
+  text-decoration:none;
+}
+h1, h2, h3 {
+	font-family: "Slabo 27px";
+	font-weight: normal;
+	margin: 0;}
+
+body {
+color:#454A54;
+background-image:url(../img/fond.png);
+font-size:1em;
+max-width: 1100px;
+min-width:800px;
+margin:auto;
+font-family:"open-sans";
+
+}
+.intro h2 {
+    font-size:2.5em;
+}
+.block h2 {
+    font-size:3.5em;
+}
+
+.block
+{ background-color:#B6DEDC;
+display:inline-block;
+line-height: 2.5;
+width:65%;
+}
+
+.block img {float:left;
+width:50px;}
+.droite{
+    float:right;
+  width:30%;
+  text-align:center;
+    }
+    .milieu{
+        text-align:center;
+        width:30%;
+    }
+    
+.gauche{
+    float:left;
+    width:30%;
+    text-align:center;
+    }
+   
+
+
+  
+.block a {
+padding :5px 15px;
+font-family: "Slabo 27px";
+background-color: #1B9CA2; 
+font-size:1.1em;
+margin-top:-3px;
+float:right;
+color:white;
+}
+
+
+
+
+aside{
+
+display:inline-block;
+width:30%;
+margin:auto;
+color:#F0FAFA;
+background-color:#34B1B2;
+vertical-align:top;
+right:25%;
+}
+aside img {
+  float:right;
+  padding:20px;
+  margin:auto;
+}
+
+aside h4 {color:#B6DEDC;}
+.block span{
+  color:#319DA3;
+}
+/* HEADER */
+/* Ce qui concerne le header et la nav */
+
+/* MAIN */
+/* Ce qui concerne le corps du site */
+
+#licence {
+    display: block;
+    text-align: center;
+    padding: 25px;}
+

@@ -1,8 +1,8 @@
 const TAUX_DE_TVA = 20.0;
 
-do { prixHT = parseFloat(prompt("Quel est le montant HT?")) ;
-// gerer les minuscules et les majuscules : recherche des methodes tolowercase et touppercase
-
+do { 
+    prixHT = parseFloat(prompt("Quel est le montant HT?")) ;
+    // gerer les minuscules et les majuscules : recherche des methodes tolowercase et touppercase
 } while(isNaN(prixHT)); 
 // boucle do_while permet d'obliger l'utilisateur à rentrer un nombre.
 
