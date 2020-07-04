@@ -1,0 +1,191 @@
+/* FONT FACE */
+/* Appelle les polices de la page */
+
+/*GLOBAL */
+/* Balises et class appelés à plusieurs endroits dans la page */
+body {
+   background-image: url(../img/fond.png);
+   margin:auto;
+   text-align:center;
+   color:#999;
+}
+h2 {
+    font-size:2.18rem;
+}
+.comp {
+    font-size:1.87rem;
+    color:#999;
+}
+h2, h3 {
+    color:#F62459;
+}
+
+.responsive {
+ width: 100%;
+height: auto;
+max-width: 400px;
+margin:auto;
+  
+}
+
+.logo {
+margin:auto;
+display:block;
+max-width:30%;
+
+width: 200px;
+height:200px;
+
+}
+.fa {
+    font-size:1.56rem;
+}
+/* HEADER */
+header {
+    text-align:center;
+    margin:auto;
+}
+div {
+
+ background-image: url(../img/bg_header.png);
+ background-repeat:no-repeat;
+background-size: auto;
+color: white; 
+margin:auto;
+padding:50px;
+}
+div a {
+    text-decoration:none;
+    padding: 10px 20px; 
+    background: #F62459; 
+    color: white; 
+
+}
+.intro {
+   background-image: url(../img/logo.svg);
+   background-repeat:no-repeat;
+}
+
+nav {
+   display:inline-block;
+    color:#999;
+    text-decoration:none;
+    text-align:center;
+    font-size:1.25rem;
+    padding:30px;
+    
+}
+nav li {
+    list-style:none;
+}
+ nav .fa{
+     display: block;
+ }
+nav ul, li a {
+    list-style:none;
+    text-align:center;
+    text-decoration:none;
+    padding:10px 20px;
+    color:#999;
+}
+
+.logo, h1 {
+    font-size:2.5rem;
+}
+
+/* MAIN */
+/* Ce qui concerne le corps du site */
+article a:hover { 
+    background-color:#F62459;
+    color:#FFFFFF;
+}
+article a { 
+    text-decoration:none;
+    color:#F62459;
+    display:block;
+    padding:10px 20px;}
+    
+    .services .fa {
+    display: inline-block;
+    width:30px;
+    height: 30px;
+    text-align:center;
+    border: 2px solid #999;
+    border-radius: 50px;
+    margin-right: 15px;
+    padding:11px;
+    }
+
+/* FOOTER */
+#licence {
+    text-align: center;
+    padding: 25px;
+    display: block;
+}
+/* Ce qui concerne le footer */
+@media screen  and (min-width: 480px)  and (max-width: 959px) {
+ nav li {
+	display: inline-block;
+}
+ nav .fa{
+     display: block;
+ }
+header {
+    display:inline-block;
+}
+.orange {
+    float:left;
+}
+.time {
+    float:right;
+}
+.aqua {float:left;}
+.sweet {float:right}
+
+  nav a {
+    display:inline-block;
+    padding: 20px 30px;
+}
+  
+  div{
+    background-size:cover;}
+
+}
+@media screen  and (min-width: 960px)  and (max-width: 1900px) {
+
+ nav li {
+	display: inline-block;
+}
+ nav .fa{
+     display: block;
+ }
+header {
+    display:inline-block;
+    width:100%;
+}
+
+.orange {
+    float:left;
+}
+.time {
+    float:right;
+}
+.aqua {float:left;}
+.sweet {float:right}
+
+.logo {
+    float:left;
+    
+    
+}
+  
+  div{
+    background-size:cover;}
+
+}
+
+header a {
+    display:inline-block;
+    text-decoration:none;
+    color:#999;
+}

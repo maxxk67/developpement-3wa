@@ -1,0 +1,154 @@
+/* FONT FACE */
+@font-face {
+  font-family: "BodegaSans_Black";
+  src: url("../fond/BodegaSans_Black.ttf") format("truetype");
+}
+/*GLOBAL */
+/* Balises et class appelés à plusieurs endroits dans la page */
+body {
+  background-image: url("../img/bg_body.svg");
+  background-color:#444444;
+  margin:auto;
+  text-align:center;
+  font-family:"BodegaSans_Black";
+  padding:20px;
+}
+/* HEADER */
+/* Ce qui concerne le header et la nav */
+.responsive {
+ width: 100%;
+height: auto;
+max-width: 400px;
+margin:auto;
+  
+}
+
+header {
+    
+ /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+47,333333+48,333333+48,333333+53 */
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(-45deg,  rgba(255,255,255,1) 47%, rgba(51,51,51,1) 48%, rgba(51,51,51,1) 48%, rgba(51,51,51,1) 53%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(255,255,255,1) 47%,rgba(51,51,51,1) 48%,rgba(51,51,51,1) 48%,rgba(51,51,51,1) 53%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(255,255,255,1) 47%,rgba(51,51,51,1) 48%,rgba(51,51,51,1) 48%,rgba(51,51,51,1) 53%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#333333',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+max-width:80%;
+display:inline-block;
+
+}
+
+header a {
+    
+    text-decoration:none;
+    color:#FFFFFF;
+   
+}
+header li {
+   
+    list-style: none;
+    text-align:right;
+    padding:20px;
+}
+
+.moto {
+    background-color:#FFFFFF;
+    padding:2%;
+
+}
+.moto a {
+    text-decoration:none;
+    padding:10px 20px;
+    background-color:#FF9D00;
+    color:#FFFFFF;
+    display:block;
+}
+.moto h3 {
+    color:#FF9D00;
+    border-bottom: 1.5px solid #FF9D00;
+    font-size:2.5rem;
+    
+}
+span  {
+    color:#FF9D00;
+}
+section {
+    padding:20px;
+}
+.fin a {
+  
+    color:#FFFFFF;
+    padding:20px;
+}
+.flexslider {
+    vertical-align:top;
+    margin:auto;
+  
+}
+nav {
+    font-size:2.5rem;
+
+    
+}
+.logo {
+    display:inline-block;
+    max-width:80%;
+ 
+
+}
+h1 {
+    font-size:4rem;
+    color:#FFFFFF;
+}
+h2 {
+    font-size:3rem;
+    color:#FFFFFF;
+}
+
+.connaitre a{
+    font-size: 1.9em;
+    display:block;
+	padding:15px 25px;
+    color:#FFFFFF;
+    text-align:center;
+    
+}
+/* FOOTER */
+#licence {
+    display: block;
+    text-align: center;
+    padding: 25px;
+}
+/* Ce qui concerne le footer */
+@media screen  and (min-width: 480px)  and (max-width: 959px) {
+header a {
+    display:inline-block;
+}
+ header {display:inline-block;
+     width:100%;
+ } 
+ .responsive { max-width:957px;}
+  }
+  
+  
+@media screen  and (min-width: 960px)  and (max-width: 1900px) {
+
+header { width:100%;
+
+
+}
+.responsive 
+{ max-width:100%;}
+
+header a { 
+    vertical-align:top;}
+.moto {
+    display:inline-block;
+    width:20%;
+    padding:15px 20px;
+    max-width:100%;
+}
+.decouvre {
+    display:inline-block;
+}
+    
+}
+

@@ -1,0 +1,129 @@
+
+
+/*GLOBAL */
+body {
+    font-size:1.6rem;
+   padding:20px;
+   color:#6E7173;
+   background-color:#F2F1F4;
+    margin:auto;
+   font-family: 'Open Sans', sans-serif;}
+
+img {
+    margin:auto;
+    display:block;
+    max-width:100%;
+}
+/* HEADER */
+/* Ce qui concerne le header et la nav */
+header {text-align:center;}
+h1 , h2 , h3{
+    font-family: 'PT Sans Narrow', sans-serif;
+    color:#30A894;
+	border-bottom: 1.5px solid #30A894;
+
+}
+
+h1 {
+    font-size:4rem;
+}
+h2{
+    font-size:2.4rem;
+}
+
+nav {
+    background-color:#30A894;
+    background-repeat:no-repeat;
+    overflow:hidden; /* Concerne les débordements , empèche les dépassements de texte */
+    margin:auto;
+ 
+
+}
+    
+nav a {
+text-decoration:none;
+display:block;
+color:#FFFFFF;
+padding:20px;
+
+}
+
+nav ul {
+	margin-left: 0;
+	padding: 10px;
+    text-align: center;
+}
+li {
+list-style:none; /* cache le style de la liste (. si liste ordonnées) */
+left:0;
+}
+  
+nav a:hover { background-color:#38B5A0;}
+
+aside {
+    display:none; /* cache la balise aside par défaut */
+}
+section a {color :#30A894;}
+  
+
+
+/*Balises et class appelés à plusieurs endroits dans la page */
+
+
+
+/* MAIN */
+/* Ce qui concerne le corps du site */
+
+/* FOOTER */
+#licence {
+    text-align: center;
+    padding: 25px;
+    display: block;
+}
+footer a { 
+    color:#30A894;
+    }
+    
+    
+
+/* medias queris (règles adapter en fonctions des tailles minimum et maximum de l'écran)*/
+@media screen  and (min-width: 480px)  and (max-width: 959px) {
+  aside{
+    display:block;
+    background-color:#B8DCB1;
+  }
+ 
+  
+}
+
+@media screen  and (min-width: 960px)  and (max-width: 1900px) {
+  aside{
+    background-color:#B8DCB1;
+    width:30%;
+    display: inline-block;
+    padding:1%;
+   vertical-align:top;
+	
+  }
+  section {
+      padding:20px 30px;
+  }
+  div {
+      width:65%;
+      padding:1%;
+      display:inline-block;
+      
+  }
+ nav > ul > li {
+	display: inline-block;
+}
+body {
+  width:80%;
+}
+
+nav a {
+    display:inline-block;
+    padding: 20px 30px;
+}
+  
+}

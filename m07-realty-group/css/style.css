@@ -1,0 +1,114 @@
+/* FONT FACE */
+/* Appelle les polices de la page */
+
+body { color:#A49E9E;
+background-color:#FFFFFF;
+    font-family:"arial", sans-serif;
+    text-align:center;
+    margin:auto;
+}
+
+
+/* Balises et class appelés à plusieurs endroits dans la page */
+/* Ce qui concerne  la nav */
+nav { 
+    
+    border-bottom: 4px solid #2CBCD6;
+   }
+
+
+.logo, h1 {
+       display: inline-block;
+       font-style: italic;
+}
+h1{
+color:#2CBCD6;    
+}
+a:hover { /*change de couleurs au passage de la souris */
+	color: #195F87;
+}
+
+a {
+	color: #f0f0f0;
+	text-decoration: none;}
+	
+
+nav .menu {
+	display:none; /* On cache les sous menus */
+	position: absolute;
+	background: #2CBCD6;
+	left: 0;
+    right: 0;
+}
+nav ul li:hover .menu { /* au clique de la souris on fait apparaite les blocs de chaque menu */
+	display: block;
+	padding-bottom: 50px;
+}
+
+nav > ul > li {
+	display: inline-block;
+}
+
+nav > ul > li > a { /* Concerne les premieres enfants ul et li du menu nav */
+	font-weight: bold;
+	padding: 20px 30px;
+	color: #2CBCD6;
+	display: inline-block;
+}
+
+.menu a { 
+	line-height: 1.8; 
+}
+
+nav > ul > li > a:hover { /* Au passage de la souris on change la couleur et le fond des liens */
+	color: white;
+	background-color: #2CBCD6;
+ 
+}
+
+    
+nav ul li:hover .menu {  /*au passage de la souris on déroule la liste */
+    display:block;
+   background-color:#2CBCD6;
+    padding-bottom:50px;
+
+    
+}
+
+
+.sous-menu {
+    display:inline-block;
+    width:20%;
+    vertical-align:top;
+  
+}
+
+
+/* MAIN */
+
+/* Ce qui concerne le corps du site */
+
+main {
+    width:80%;
+    text-align:center;
+}
+
+
+
+span a {color :#2CBCD6;
+    padding:20px;
+}  /*concerne les 4 boutons principaux (products ...)*/
+span :hover {
+    background-color :#2CBCD6;
+    color:white;
+}
+
+/* FOOTER */
+ #licence{
+    display: block;
+    text-align: center;
+    padding: 25px;}
+footer {
+     background-color:#2CBCD6;
+}
+footer a { color:#FFFFFF;}
