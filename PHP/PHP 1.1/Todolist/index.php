@@ -13,6 +13,7 @@
     <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
         <title>Document</title>
     </head>
     <body>
@@ -20,12 +21,12 @@
     		<fieldset> 
         		<legend>Titre</legend>
         		<label for="title"> Titre de la tâche.</label>
-        		<input type="text" id="title" name="title"/>
+        		<input type="text" required id="title" name="title"/>
             </fieldset>
             <textarea  name="tache" rows="5" cols="33" placeholder="description"></textarea>
             <label for="date">Date de fin de tache</label>
     
-        <input type="date" id="date" name="date">
+        <input type="date" required id="date" name="date">
         
            <select name="choix">
                 <option value="faible" selected> faible</option> 
@@ -35,16 +36,22 @@
         
             <input type="submit" value="Envoyer">
         </form>
-    
+         <form action="deleteall.php" method="POST">
+            <button>Effacer toutes les taches</button>
+        </form>
        
     
     <?php  if(!empty($data)) : ?>
     
     <?php foreach($data as $index => $todo) : ?>
-        <form>
-            
+        <form method="POST" action="deleteone.php">
             <ul>
-                <li><input type="checkbox" name="tache" class="line" value="<?= $index ?>"></li>
+                <li>
+                    <input type="checkbox" name="tache" class="line">
+                    <input type="hidden" name="taskId" class="line" value="<?= $index ?>">
+                </li>
+                <button type="submit">Effacer</button>
+                
                 <?php foreach($todo as $index => $line) : ?>
                     
                     <li><?= $line ?></li>
@@ -52,7 +59,8 @@
                 <?php endforeach ?>
             </ul>
             
-        </form>
+      </form>
+      
     <?php endforeach ?>
     
     <?php endif ?>
