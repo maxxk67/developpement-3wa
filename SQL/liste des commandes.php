@@ -1,3 +1,6 @@
+<?php
+    require ('connect.php') 
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,20 +10,36 @@
     <title>Liste des commandes</title>
 </head>
 
-<?php
 
-require ('connect.php') ?>
 
     <body>
     
         <header>
             <h1>Liste des commandes</h1>
         </header>
-        
-        <ol> 
-            <li>Numéro de la commande <?php $order ['orderNumber']; ?></li> 
-            <li>Date de la commande</li>
-        </ol>
-    
+        <!-- j'affiche toutes les commandes dans une liste -->
+        <table>
+            <tr>
+                <th>Numéro de la commande</th>
+                <th> Date de la commande</th>
+                <th>Date de la livraison </th>
+                <th>Statut de la commande</th>
+            </tr>
+            <tbody>
+                <?php foreach ($orders as $order) : ?> 
+                <tr> 
+                    <td>
+                        <a href="detailcommande.php?orderNumber=<?php echo $order['orderNumber']; ?>">
+                            <?php echo $order['orderNumber']; ?>
+                        </a>
+                    </td> 
+                    <td><?php echo $order['orderDate']; ?></td>
+                    <td><?php echo $order['requiredDate']; ?></td>
+                    <td><?php echo $order['status']; ?></td>
+                </tr>
+                <?php endforeach ?>        
+            </tbody>
+           
+        </table>
 </body>
 </html>

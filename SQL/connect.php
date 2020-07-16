@@ -13,11 +13,3 @@ $statement = $pdo->prepare ("SELECT * FROM orders"); // (requête SQL)selectionn
 $statement->execute();
 $orders = $statement ->fetchALL(PDO::FETCH_ASSOC); //fetch_assoc transforme en tableau assiocatif
 $pdo = null;
-
-foreach ($orders as $order) {
-
-    
-}
-
-
-?>
