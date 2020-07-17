@@ -304,3 +304,42 @@ ORDER BY c.customerName, o.orderDate;
 -- ];
 
 -- PHP Data Objects
+
+-- sous requete
+
+SET @TVA = 20 / 100; -- declaration de variable
+
+SELECT (MSRP * @TVA) AS percentage 
+FROM products 
+WHERE productCode = 'S10_1678';
+
+-- total par ligne de produits
+SELECT *,
+(SELECT (quantityOrdered * priceEach)) AS linePrice
+FROM orderdetails
+WHERE orderNumber = 10100;
+
+-- total avec avec tva (pour un produit)
+SELECT *,
+(SELECT priceEach * @TVA) as taxes,
+(SELECT (quantityOrdered * priceEach)) AS linePrice
+FROM orderdetails
+WHERE orderNumber = 10100;
+
+
+-- total avec Montant HT
+SELECT *,
+(SELECT priceEach * @TVA) AS taxes,
+(SELECT (quantityOrdered * priceEach)) AS linePrice,
+(SELECT (linePrice * @TVA)) AS montantTVA,
+(SELECT (linePrice + montantTVA)) AS ligneTTC
+FROM orderdetails
+WHERE orderNumber = 10100;
+
+
+
+-- totalTTC
+SElECT SUM(od.quantityOrdered * od.priceEach ) AS totalHT
+FROM orderdetails AS od 
+WHERE orderNumber = 10100;
+
