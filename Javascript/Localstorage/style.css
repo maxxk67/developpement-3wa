@@ -1,6 +1,21 @@
 body {
     text-align:center;
-    background-color:green;
+    background-color:#87CEFA;
     color:white;
+    margin:auto;
     
 }
+
+.cacher {
+    display:none;
+}
+
+input[name="email"]{
+background-color:transparent;
+
+}
+
+input[name="name"]{
+background-color:transparent;
+}
+

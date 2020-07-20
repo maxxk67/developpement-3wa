@@ -1,64 +1,86 @@
+import {                         //importe les fonctions d'un fichier module JS.
+    addToLocalStorage,
+    removeLocalStorage,
+    getItemFromLocalStorage,
+    storagekey,
+} from './localStorage.js';
+
+import {affichage, createUL, divPourContacts, deleteContact,} from './affichageHtml.js';
+
 
 //je selectionne le formulaire
-const form = document.querySelector('form');
-let storagekey = 'contacts';
-//j'écoute le bouton submit 
-form.addEventListener('submit', function(event) {
-   event.preventDefault();
-   
-   const name = this.querySelector('input[name=name]').value;
-   const email = this.querySelector('input[email=email]').value;
 
-    const contact = {
-        name : name,
-        email : email
-    };
 
-// on met les objets dans un tableau 
-    const contacts =  getItemFromLocalStorage(storagekey);
-    contacts.push(contact);
-
-//On envoie le tableau dans local storage
-
-    addToLocalStorage(storagekey, contacts);
+document.addEventListener('DOMContentLoaded', () => {
+    affichage();
+    createContact();
+    deleteContact();
+    document.querySelector('#register').addEventListener('click', cacheOuAfficheFormulaire);
 });
 
-// recuperation d'un element
+//let button = document.querySelector('#register');
 
+document.querySelector('#remove').addEventListener('click', effacerLesContacts);
+
+
+
+function effacerLesContacts() {
+    removeLocalStorage(storagekey);
+    
+    divPourContacts.innerHTML = '';
+}
   
 
-    //JSON.stringify(contact); //converti objet en string
-    //JSON.parse('string'); //Converti string en objet.
-    
-    // Creer un formulaire avec au moins deux input
-
-function addToLocalStorage(key, value) {
-
-    localStorage.setItem(key, JSON.stringify(value));
-
+ function createContact() {
+     const form = document.querySelector('form');
+     //j'écoute le bouton submit 
+     form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // si une case de forumulaire ou l'autre est vide
+        if (this.querySelector('input[name=name').value === '' || this.querySelector('input[name=email]').value === '') {
+             // on retourne .
+            return;
+        }
+        
+        const name = this.querySelector('input[name=name]').value;
+        const email = this.querySelector('input[name=email]').value;
+        
+        const contact = {
+            name : name,
+            email : email
+        };
+        
+        if(contact){  //si j'ai un contact je l'enregistre
+            persistContact(contact);
+        }
+        
+        // on met les objets dans un tableau 
+        function persistContact(contact){
+        const contacts =  getItemFromLocalStorage(storagekey);
+        contacts.push(contact);
+        const index = contacts.length - 1;
+        //On envoie le tableau dans local storage
+        
+        addToLocalStorage(storagekey, contacts);
+        
+        const ul = createUL(contact, index);
+        
+        divPourContacts.appendChild(ul); 
+            
+        }
+    });
 }
 
-function getItemFromLocalStorage(key) {
-    return JSON.parse(localStorage.getItem(key)) || [];
+
+ //quand je clique sur le bouton j'arriche le formulaire.
+
+function cacheOuAfficheFormulaire () {
+    // le this c'est l'element que t'as clique
+    //this.classList.toggle('form');
+    const form = document.querySelector('form');
+    form.classList.toggle('cacher');
 }
 
-//recuperation de tous les contacts du tableau 
-const contacts =  getItemFromLocalStorage(storagekey);
-//affichage sur la page 
 
-const div = document.createElement('div'); //cree une div dans la page html
 
-contacts.forEach((contact, index) => {     //boucle qui parcour le tableau.
-    const ul = document.createElement('ul');
-
-    ul.setAttribute('data-index', index); // attribution du data-index.
-    ul.setAttribute('data-test', 'test');
-
-    ul.innerHTML = `<li>${contact.name}</li><li>${contact.email}</li>`; //affichage du nom et de l'email du stockage local.
-
-    div.appendChild(ul);
-
-});
-
-const divPourContacts = document.querySelector('.container'); //cree une div avec class container pour contact.
-divPourContacts.appendChild(div);

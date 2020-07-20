@@ -59,14 +59,11 @@ document.querySelector('.container').appendChild(div);
 
 
 if(localStorage.getItem('contact') !== null) {
-    contacts = JSON.parse(localStorage.getItem('contact'));
+    contacts = JSON.parse(localStorage.getItem('contact')); //JSON.parse 
+                                                            //converti l'objet en string
 } else {
     contacts = [];
 }
-
-
-
-
 
 
 
@@ -75,8 +72,6 @@ localStorage.removeItem('contact');
 contacts = JSON.parse(localStorage.getItem('contact')) || [];
 
 console.log(contacts);
-
-
 
 
 // j'ai les donnees:

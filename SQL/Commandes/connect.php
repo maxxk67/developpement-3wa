@@ -12,4 +12,4 @@ $pdo->exec('set names utf8');
 $statement = $pdo->prepare ("SELECT * FROM orders"); // (requête SQL)selectionne une table dans la base de donnees
 $statement->execute();
 $orders = $statement ->fetchALL(PDO::FETCH_ASSOC); //fetch_assoc transforme en tableau assiocatif
-$pdo = null;
+
