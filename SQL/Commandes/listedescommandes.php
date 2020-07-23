@@ -26,7 +26,7 @@
             <h1>Liste des commandes</h1>
         </header>
         <!-- j'affiche toutes les commandes dans une liste -->
-        
+            <button type="button">Infos Ajax</button>
             <table class="table">
             <thead class="thead-dark">
             <tr>
@@ -51,5 +51,8 @@
             </tbody>
            
         </table>
+        
+
 </body>
+
 </html>
