@@ -44,7 +44,7 @@ let produits = data
 
 function recherchePrix() {
     console.log('ok');
-    let maxPrice = $("prix").val();
+    let maxPrice = $("#prix").val();
     let dataprice = {price:maxPrice};
     
     $.get('rechercheprix.php', dataprice, ajaxLoaded);

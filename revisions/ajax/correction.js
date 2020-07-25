@@ -28,7 +28,6 @@ $(document).load(function()
 })*/
 
 $(function() {
-
     // fonction de traitement AJAX
     // le parametre json va automatiquement recevoir les données de la page products.php
     function getProducts(json) {
@@ -117,9 +116,6 @@ $(function() {
         
         $("#products").html(html);
         
-        
-        
-
     }
 
     // Poser un event listener au clic sur le boutton
@@ -130,8 +126,47 @@ $(function() {
         // Charger la liste de produits en AJAX
 
         $.get('products.php', getProducts);
-
     }
+    
+  
+    function onClickSearch()
+    {
+        // recuperer la valeur de l'input
+    
+        /*let input = document.getElementById('max-price');
+        let maxPrice = input.value;*/
+        
+        let maxPrice = $("#max-price").val();
+        console.log(maxPrice);
+        
+        // requete AJAX avec envoi
+        
+        // ranger la données dans un objet
+        
+        let data = { price : maxPrice }
+        
+        $.get('search.php', data , getProducts );
+        
+        
+        /*let formdata = new FormData();
+        formdata.append('price', maxPrice);
+                
+        let request = new Request('search.php', {
+            method: 'GET',
+            body: formdata,
+            mode: 'cors'
+        });
+        fetch(request)
+            .then(searchResult)
+            .catch(error => console.error(error));*/
+        
+    }
+    
+    // Code principal
 
     $("#load").click(onClickLoadProducts);
+    $("#search").click( onClickSearch );
+    
+    
+    
 })
