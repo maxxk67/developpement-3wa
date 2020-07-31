@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+    </script>
+    <title>Velib</title>
+</head>
+<body>
+    <header>
+        <h1>Station Velib</h1>
+    </header>
+    
+    <main>
+        <aside>
+           <img src="logo.png"></img>
+           <input id="infosstations" type="button"value="Infos stations">
+           <div id ="list">
+            </div>
+        </aside>
+         
+         <strong>Pour les détails de la station, cliquez dessus</strong>
+         
+         <div id="station">
+        <h1></h1>
+        <p> Il reste <span id="available-bikes">19</span> Vélib(s) disponibles à cette station. </p>
+        <h1>Adresse</h1>
+        <p id="address"> </p>
+        <h1>Places disponibles</h1>
+        <p id="free-slots"> </p>
+        <h1>Localisation</h1>
+        <p id="GPS"></p>
+        
+        
+    </div>
+    <div id="map"></div>
+    </main>
+</body>
+</html>
