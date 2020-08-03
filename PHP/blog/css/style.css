@@ -5,10 +5,59 @@
 body {
     text-align:center;
     margin:auto;
-    background-color:#00FFFF;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+    url("../ep.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    color:yellow;
+    
+}
+
+h1{
+    color:white;
 }
 /* HEADER */
-/* Ce qui concerne le header et la nav */
+header {
+    background-color:#5371DC;
+  }
+  
+  header a {
+padding: 10px 20px; 
+background: #0078D7; 
+color: white; 
+display: block;
+width: 11%;
+margin:auto;
+
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  background-color:rgba(135,206,250,0.6);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+@media screen and (max-width: 600px) {
+   input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+
+}
 
 /* MAIN */
 /* Ce qui concerne le corps du site */
