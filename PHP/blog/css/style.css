@@ -3,33 +3,91 @@
 
 /*GLOBAL */
 body {
-    text-align:center;
+
+   
     margin:auto;
-    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
-    url("../ep.jpg");
+    background-image: url("../ep.jpg");
     background-repeat:no-repeat;
     background-size: cover;
     box-sizing: border-box;
-    color:yellow;
+    color:white;
     
 }
 
-h1{
+nav {
+   
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+article {
+  max-width:40%;
+  padding:20px;
+ }
+ 
+.article{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    background-color: rgba(0,0,0,.3);
+    overflow:auto;
+    max-width:80%;
+    padding:20px;
+}
+
+.detail {
+    display:inline-block;
+    max-width:80%;
+    padding:20px;
+    background-color:rgba(255,99,71,0.4);
     color:white;
+}  
+
+
+.comments {
+    display:inline-block;
+    max-width:60%;
+    overflow:hidden;
+}
+
+h1{
+    color:#EEE8AA;
+    
 }
 /* HEADER */
 header {
-    background-color:#5371DC;
+    background-image: url("../epb.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    margin:auto;
+    height:150px;
+    text-align:center;
+    overflow:auto;
+     vertical-align:top;
+     
   }
   
-  header a {
-padding: 10px 20px; 
-background: #0078D7; 
-color: white; 
-display: block;
-width: 11%;
-margin:auto;
+header button {
+    float:right;
+    background: #0078D7; 
+    color: white; 
+    text-align:center;
+    width: 11%;
+}
 
+header a {
+    text-decoration:none;
+    color:white;
+}
+
+aside {
+   display:inline-block;
+    background-color:rgba(135,206,250,0.7); 
+    color:red;
+    max-width:30%;
+    vertical-align:top;
+    
+    
 }
 
 input[type=text], select, textarea {
@@ -50,6 +108,45 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
+li {
+    list-style:none;
+    display:inline-block;
+}
+
+li a {
+    text-align:center;
+    color:#A4D4D5;
+    font-size:1.2rem;
+}
+
+.cancel
+{
+    background-color: #FF3300;
+    color: white;
+}
+.cancel:hover /* action sur le bouton annuler au clique de la souris*/
+{
+    background-color: #FF6633;
+    box-shadow: 0 0 4px 2px rgba(255, 102, 51, 0.5);
+    color: white;
+}
+
+.send 
+{
+    background-color: #339966;
+    color: white;
+}
+.send:hover
+{
+    background-color: #66CC99;
+    box-shadow: 0 0 4px 2px rgba(102, 204, 153, 0.5);
+    color: white;
+}
+
+.button:active
+{
+    box-shadow: none;
+}
 
 @media screen and (max-width: 600px) {
    input[type=submit] {
