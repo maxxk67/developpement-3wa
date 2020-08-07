@@ -15,8 +15,8 @@
 		<header>
 			<h1><a href ="index.php">Blog Actualités</a></h1>
 			<nav>
-			 <button onclick="window.location.href = 'request.php';">Ajouter un article</button>
-		    <button onclick="window.location.href = '#';">Panneau administration</button>
+			 
+		    <button onclick="window.location.href = 'admin.php';">Panneau administration</button>
 			</nav>
 			</header>
 			

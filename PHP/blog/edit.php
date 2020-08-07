@@ -19,7 +19,7 @@
     $articles = $request ->fetchALL(PDO::FETCH_ASSOC); 
     $pdo = null;
 
-include ('home.php');
+include('editarticle.php')
 
-
+?>
 

@@ -8,13 +8,13 @@
     <div class="detail">
     
     	
-    	
-    	   <li><p> <?php echo $articles['content'] ?></p></li>
-	   			<li>rédigé par <?php echo $articles['firstname']; ?></li>
-			    <li><?php echo $articles['lastname']; ?></li>
-			  	<li>le <?php echo $articles['publication_date']; ?></li>
-	    	 <li>Categorie <?php echo $articles['name']; ?></li>
-   
+    	    <ul>
+    	   <li><p> <?php echo htmlspecialchars ($articles['content']) ?></p></li>
+	   			<li><p>rédigé par <?php echo htmlspecialchars($articles['firstname']); ?></li>
+			    <li><?php echo htmlspecialchars ($articles['lastname']); ?></p></li>
+			  	<li>le <?php echo  $articles['publication_date']; ?></li>
+	    	 <li>Categorie <?php echo htmlspecialchars( $articles['name']); ?></li>
+           </ul>
        
       </div>
     
@@ -42,12 +42,13 @@
         </fieldset>
         </form>
            </div>
-              <aside>
+              <div class="acomment">
          <?php  foreach ($comments as $comment) : ?>
           <ul>
-              <li>rédigé par <?php echo $comment['nickname']; ?></li>
-              <li><p> <?php echo $comment['content'] ?></p></li>
-         </ul>
+              <li>rédigé par <?php echo htmlspecialchars ($comment['nickname']); ?></li>
+              <li><p> <?php echo htmlspecialchars ($comment['content']) ?></p></li>
+         
           <?php endforeach ?>
-      </aside>
+          </ul>
+      </div>
 </main>
