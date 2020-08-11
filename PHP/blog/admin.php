@@ -18,7 +18,7 @@ include ('header.php');
                         <a href="request.php">Ajouter un article</a></td>
 			    
 			    <td><p> <p>Ce liens permet de modifier ou suppirmer un article.</p>
-                    <a href="edit.php">Ajouter un article</a></p></td>
+                    <a href="edit.php">Editer un article</a></p></td>
                     
                 <td><p>Modération des commentaires.</p>
                 <a href="editcomment.php">Modérer les commentaires</a></td>
