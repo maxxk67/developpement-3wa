@@ -1,0 +1,62 @@
+<h1>Inscription</h1>
+<?php
+    if (isset($error)==true)
+    {
+        foreach ($error as $errors)
+        echo "<div>$errors</div>";
+        
+    }
+    ?>
+<form id="register" action="<?= $requestUrl ?>/form" method="POST">
+   <center><fieldset>
+    <legend>Civilité</legend>
+    <label for="firstname">Prénom</label>
+    <input type="text"  id="firstname" name="firstname"/><div id="prenom"></div>
+    <label for="lastname">Nom</label>
+    <input type="text"  id="lastname" name="lastname"/><div id="nom"></div>
+    <label> Date de naissance </label><div id="birthday"></div>
+    <select name="day">
+        <?php for($i = 1; $i <= 31; $i++) : ?>
+            <option value="<?= $i ?>"><?= $i ?></option>
+        <?php endfor; ?>
+        </select>
+        <select name="month">
+    		<option value="1">Janvier</option>
+    		<option value="2">Février</option>
+    		<option value="3">Mars</option>
+    		<option value="4">Avril</option>
+    		<option value="5">Mai</option>
+    		<option value="6">Juin</option>
+    		<option value="7">Juillet</option>
+    		<option value="8">Août</option>
+    		<option value="9">Septembre</option>
+    		<option value="10">Octobre</option>
+    		<option value="11">Novembre</option>
+    		<option value="12">Décembre</option>
+    	</select>
+    	
+    <select name="year">
+            <?php for($i = 1900; $i <= date('Y'); $i++) : ?>
+                <option value="<?= $i ?>"><?= $i ?></option>
+            <?php endfor; ?>      
+    </select>
+    <label for="adress">Adresse</label>
+    <textarea name="adress" id="adress"/></textarea><div id="adress"></div>
+    <label for="city">Ville :</label>
+    <input type="text"  id="city" name="city"/><div id="city"></div>
+    <label for="zipcode">code postale :</label>
+    <input type="text"  id="zipcode" name="zipcode"/><div id="zipcode"></div>
+    <label for="phone">Numéro de téléphone:</label>
+    <input type="text"  id="phone" name="phone"/><div id="phone"></div>
+    </fieldset>
+    <fieldset>
+     <legend>Authentification</legend>
+    <label for="email">adresse email :</label>
+    <input type="email"  id="email" name="email"/><div id="email"></div>
+    <label for="password">Mot de passse :</label>
+    <input type="password"  id="password" name="password"/><div id="password"></div>
+    </fieldset>
+
+    <input type="submit" id ="submit" value="Envoyer"/>
+    </center> 
+</form>
