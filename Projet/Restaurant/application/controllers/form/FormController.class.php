@@ -71,6 +71,7 @@ class FormController
                                  $email,
                                  $password);
         
+                $http->redirectTo('/');	
     	/*
     	 * Méthode appelée en cas de requête HTTP POST
     	 *

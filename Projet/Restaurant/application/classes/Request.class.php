@@ -14,6 +14,7 @@
     $request = $pdo->prepare ("SELECT title,
                                     description,
                                     price,
+                                    id,
                                     picture FROM products"); // (requête SQL)selectionne une table dans la base de donnees
     $request->execute();
     $products = $request ->fetchALL(PDO::FETCH_ASSOC); //fetch_assoc transforme en tableau assiocatif

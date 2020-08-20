@@ -1,0 +1,25 @@
+<h1>Connexion</h1>
+        <?php 
+    
+        if ( isset ($error ))
+        {
+            echo "<p>$error</p>";
+        }
+    
+    ?>
+    
+
+
+
+
+<form id="session" action="<?= $requestUrl ?>/session" method="POST">
+<center><fieldset>   
+    <legend>Login</legend>
+<center>
+    <label for="login">Email</label>
+    <input id="login" type="text" name="login"/>
+    <label for="password">Mot de passe</label>
+    <input id="password" type="password" name="password"/>
+</fieldset> </center>
+    <input type="submit" value="Submit"/>
+</form>

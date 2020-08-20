@@ -31,7 +31,28 @@
 <!-- Interface utilisateur -->
 <nav class="user-interface">
     <ul class="link-list">
-       <a href="<?= $requestUrl ?>/Form"> Inscritption </a><!-- Code HTML/PHP à écrire -->
+              
+            <?php if ( isset($_SESSION['connected_user']) == false ): ?>
+                
+                <a href="<?= $requestUrl ?>/form">
+                    Inscription
+                </a>
+                <a href="<?= $requestUrl ?>/session">
+                    connexion
+                </a>
+            <?php else: ?>
+                <p> Bonjour 
+                    <?= htmlspecialchars($_SESSION['connected_user']['firstname']) ?> 
+                    <?= htmlspecialchars($_SESSION['connected_user']['lastname']) ?> 
+                </p>
+                <a href="<?= $requestUrl ?>/disconnect">
+                    deconnexion
+                </a>
+                <a href="<?= $requestUrl ?>/order">
+                    Commander
+                </a>
+            <?php endif; ?>
+                                            <!-- Code HTML/PHP à écrire -->
     </ul>
 </nav>
 
@@ -52,6 +73,7 @@
 
 <!-- Code principal JavaScript de l'application -->
 <script src="<?= $wwwUrl ?>/js/main.js"></script>
+
 
 </body>
 </html>

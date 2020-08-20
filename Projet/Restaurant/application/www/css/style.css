@@ -6,18 +6,23 @@ body {
 
 table {
     margin:auto;
+    border:0;
+    border-collapse:collapse;
   
 }
+
+
 td {
     text-align:center;
-    
+   
     font-size:1.2rem;
     color:blue;
     padding:10px;
 }
 
-td:hover
+tr:hover
 {
+    
     background-color: #FF4500;
     box-shadow: 0 0 4px 2px rgba(102, 204, 153, 0.5);
     color: white;

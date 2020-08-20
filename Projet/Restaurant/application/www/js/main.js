@@ -1,6 +1,6 @@
 'use strict';
 
-
+let form = document.getElementById('register');
 /////////////////////////////////////////////////////////////////////////////////////////
 // FONCTIONS                                                                           //
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -39,7 +39,7 @@ function resetErrors()
     }
 }
 
-function onRegisterSubmit( event )
+function verif( event )
 {
     resetErrors();
     
@@ -71,7 +71,7 @@ function onRegisterSubmit( event )
 document.addEventListener('DOMContentLoaded', function() 
 {
 
-form.addEventListener('submit', verifForm);
+form.addEventListener('submit', verif);
 
 
 });
