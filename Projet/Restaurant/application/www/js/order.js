@@ -18,21 +18,20 @@ selectElement.addEventListener('change', get);
 }*/
 function get (){
     let url = getRequestUrl() + '/ajax';
-    console.log('get');
     let product = $(".order").val();
-    console.log(product);
     let order = {order:product};
-     $.get(url, order, ajaxLoaded);
+    $.get(url, order, ajaxLoaded);
 }
 
 function ajaxLoaded(json) {
                 
-            let products=json;
-            let produits = JSON.parse([products]);
-            console.log(getWwwUrl()+'/images/meals/'+produits.picture);
-            $("#name").text(produits.title); 
-            $("#description").text(produits.description);
-           $("#photo").attr('src', getWwwUrl()+'/images/meals/'+produits.picture);
-            $("#price").text(produits.price + '€');
-        }
+    let products=json;
+    let produits = JSON.parse([products]);
+    console.log(getWwwUrl()+'/images/meals/'+produits.picture);
+    $("#name").text(produits.title); 
+    $("#description").text(produits.description);
+    $("#photo").attr('src', getWwwUrl()+'/images/meals/'+produits.picture);
+    $("#price").text(produits.price  );
+}
+
 }); 
