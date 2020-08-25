@@ -33,22 +33,22 @@
     <ul class="link-list">
               
             <?php if ( isset($_SESSION['connected_user']) == false ): ?>
-                
-                <a href="<?= $requestUrl ?>/form">
+              
+                <a class ="user" href="<?= $requestUrl ?>/form">
                     Inscription
                 </a>
-                <a href="<?= $requestUrl ?>/session">
+                <a class ="user" href="<?= $requestUrl ?>/session">
                     connexion
                 </a>
             <?php else: ?>
-                <p> Bonjour 
+                <p class ="connect"> Bonjour 
                     <?= htmlspecialchars($_SESSION['connected_user']['firstname']) ?> 
                     <?= htmlspecialchars($_SESSION['connected_user']['lastname']) ?> 
                 </p>
-                <a href="<?= $requestUrl ?>/disconnect">
+               <a class ="user" href="<?= $requestUrl ?>/disconnect">
                     deconnexion
                 </a>
-                <a href="<?= $requestUrl ?>/order">
+                <a class ="user" href="<?= $requestUrl ?>/order">
                     Commander
                 </a>
             <?php endif; ?>

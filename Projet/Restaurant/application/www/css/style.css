@@ -1,22 +1,71 @@
 body {
-    background-color:rgb(224,255,255);
+    background-image:url(../images/resto1.jpg);
+    background-size:cover;
+    text-align:center;
+    color:skyblue;
+    background-repeat:no-repeat;
+    margin:auto;
+}
+
+header {
+    background-color: rgba(0,0,0,.3);
+}
+
+header a {
+    text-decoration:none;
+    color:white;
+    text-align:center;
+}
+
+button {
+   
+    background: #0078D7; 
+    color: white; 
+    text-align:center;
+    width: 11%;
+}
+
+.user {
+    display:inline-block;
+    background-color:#00BFFF;
+    font-size:1.2rem;
+    color:white;
+    text-decoration:none;
+    padding:20px;
+}
+
+.info {
+    border: 3px blue solid;
+     width:30%;
+    background-color:skyblue;
+    color:red;
     text-align:center;
     margin:auto;
+    vertical-align:top;
 }
 
+.connect {
+    font-size:2rem;
+    float:right;
+    border: 3px skyblue solid;
+    background-color: rgba(0,0,0,.3);
+    color:orange;
+}
 table {
+    
     margin:auto;
-    border:0;
+    
     border-collapse:collapse;
+    background-color: rgba(0,0,0,.3);
+    width:80%;
   
 }
-
 
 td {
     text-align:center;
    
     font-size:1.2rem;
-    color:blue;
+    color:white;
     padding:10px;
 }
 
@@ -51,14 +100,10 @@ footer li {
    
 }
 
-
-
 form {
-    background-color:#B0E0E6;
+    background-color: rgba(0,0,0,.3);
     color:red;
    
-    
-     
 }
 
 textarea {
@@ -70,10 +115,16 @@ input {
     width:200px;
     background-color: rgba(0,0,0,.3);
     text-align:center;
+    color:white;
 }
 
 label {
     display:block;
     width:200px;
     text-align:center;
+}
+
+.error  {
+     border: 3px red solid;
+     background-color:red;
 }

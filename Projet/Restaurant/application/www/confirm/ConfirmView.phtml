@@ -1,0 +1,55 @@
+<center>
+
+<div class ="info">
+
+<p><?php echo htmlspecialchars  ($connected_user ['firstname']) ?>
+<?php echo htmlspecialchars ($connected_user ['lastname']) ?></p>
+<p><?php echo htmlspecialchars ($connected_user  ['adress']) ?></p>
+<p><?php echo htmlspecialchars ($connected_user ['zipcode']) ?>
+   <?php echo htmlspecialchars ($connected_user ['city']) ?></p>
+
+
+</div>
+
+<table class="generic-table meal-list">
+    <caption><H1>Detail de la commande</H1></caption>
+    <thead> <th>Produit</th>
+            <th>quantité</th>
+            <th>Prix unitaire</th>
+            <th>Prix Total</th>
+            <th>TVA 20%</th>
+            <th>Prix Total TTC</th>
+    </thead>
+    
+<tbody>
+    <tr>
+
+<?php foreach ($cart as $detail) : ?>
+<td><p><h3><?php echo htmlspecialchars ($detail->name); ?></h3></p></td>
+<td><p><?php echo htmlspecialchars ($detail->quantity); ?></p></td>
+<td><p><?php echo htmlspecialchars ($detail->price) ; ?>€</p></td>
+<td><p><?php echo htmlspecialchars ($detail ->quantity * $detail->price); ?>€</p></td>
+<td><p><?php echo htmlspecialchars ($detail ->quantity * $detail->price *0.2); ?>€</p></td>
+<td><p><?php echo htmlspecialchars ($detail ->quantity * $detail->price *1.2); ?>€</p></td>
+</tr>
+    </tbody>
+
+
+<?php endforeach ?>
+
+ <tr>
+        <td colspan="3"> </td>
+        <td> 
+            Total : <?= $total ?> € <br>
+            TVA : <?= $taxes ?> € <br>
+            TCC : <?= $totalWithTaxes ?> € 
+        </td>
+    </tr>
+</table>
+</center>
+
+
+
+<a href="<?= $requestUrl ?>/validate">
+    <button> Confirmer la commande </button>
+</a>

@@ -41,20 +41,21 @@
             <?php endfor; ?>      
     </select>
     <label for="adress">Adresse</label>
-    <textarea name="adress" id="adress"/></textarea><div id="adress"></div>
+    <textarea name="adress" id="adress"/></textarea><p id="adress_error"></p>
     <label for="city">Ville :</label>
-    <input type="text"  id="city" name="city"/><div id="city"></div>
+    <input type="text"  id="city" name="city"/><p id="city_error"></p>
     <label for="zipcode">code postale :</label>
-    <input type="text"  id="zipcode" name="zipcode"/><div id="zipcode"></div>
+    <input type="text"  id="zipcode" name="zipcode"/><p id="zipcode_error"></p>
     <label for="phone">Numéro de téléphone:</label>
-    <input type="text"  id="phone" name="phone"/><div id="phone"></div>
+    <input type="text"  id="phone" name="phone"/><p id="phone_error"></p>
     </fieldset>
     <fieldset>
      <legend>Authentification</legend>
     <label for="email">adresse email :</label>
-    <input type="email"  id="email" name="email"/><div id="email"></div>
+    <input type="email"  id="email" name="email"/><p id="email_error"></p>
+    <p id="password_error"></p>
     <label for="password">Mot de passse :</label>
-    <input type="password"  id="password" name="password"/><div id="password"></div>
+    <input type="password"  id="password" name="password"/>
     </fieldset>
 
     <input type="submit" id ="submit" value="Envoyer"/>
